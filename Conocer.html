@@ -7,10 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pbro Martin Avalos</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/templatemo-business-oriented.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para la imagen */
+        #moverImagen {
+            position: absolute;
+            width: 174px;
+            height: 45px;
+            pointer-events: none;
+            /* Para que no interfiera con la interacción del mouse */
+            transition: top 0.1s, left 0.1s;
+            /* Movimiento suave */
+            z-index: 9999;
+            /* Garantiza que se muestre encima de otros elementos */
+        }
+
+        /* Media query para pantallas grandes (solo para PC) */
+        @media (min-width: 768px) {
+            /* En este caso, no es necesario modificar nada en CSS */
+        }
+
+        /* En pantallas pequeñas, no mostrar la imagen */
+        @media (max-width: 767px) {
+            #moverImagen {
+                display: none;
+            }
+        }
+    </style>
+
+
 </head>
 <style>
     /* Definimos la animación de pulso */
@@ -19,10 +50,12 @@
             transform: scale(1);
             opacity: 1;
         }
+
         50% {
             transform: scale(1.1);
             opacity: 0.8;
         }
+
         100% {
             transform: scale(1);
             opacity: 1;
@@ -35,12 +68,37 @@
     }
 </style>
 <style>
-    body {
-      background-color: #797c9959;
-      color: white; /* Asegúra de que el texto sea visible */
+    /* Definimos la animación de pulso */
+    @keyframes pulsar {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
     }
-  </style>
-                                              
+
+    /* Aplicamos la animación a la imagen */
+    .img-pulses {
+        animation: pulsar 0.5s infinite;
+    }
+</style>
+<style>
+    body {
+        background-color: #797c9959;
+        color: white;
+        /* Asegúra de que el texto sea visible */
+    }
+</style>
+
 <body>
     <div id="parallax-1" class="parallax-window" data-parallax="scroll" data-image-src="img/in.jpg">
         <div class="container-fluid">
@@ -51,9 +109,9 @@
                     </div>
                 </div>
             </div>
-        
+
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        
+
         </div>
     </div>
     <div class="tm-nav-container-outer">
@@ -61,85 +119,482 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg" id="tm-main-nav">
-                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbar-nav" 
-                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+                            data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false"
+                            aria-label="Toggle navigation">
                             <span class="dark-blue-text"><i class="fas fa-bars"></i></span>
                         </button>
                         <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link tm-nav-link" href="index.html">Inicio <span
+                                            class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item active">
                                     <a class="nav-link tm-nav-link" href="#">Conocer</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="Cons.html">Otros</a>
+                                    <a class="nav-link tm-nav-link" href="about.html">Otros</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="contact.html">Contactar</a>
                                 </li>
-                            </ul>                            
-                        </div>                        
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- primer descripcion -->
     <div class="container-fluid mt-7">
+        <!-- Texto a la Izquierda -->
         <div class="row mb-6">
             <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
                 <section class="mb-10">
                     <div>
                         <h3 class="tm-title-gray mb-4">“UN HOMBRE DE SUEÑOS”</h3>
                         <hr class="mb-5 tm-hr">
-                        
-                        <p class="mb-5">El Padre Martín Enrique Ávalos Magaña, nacido el 13 de abril de 1963 en Santa Ana, El Salvador, es un sacerdote y líder espiritual que ha dedicado más de 30 años de su vida a la evangelización.
-                            <br>Tras completar sus estudios en Teología Moral en Roma, fue nombrado párroco de diversas parroquias, donde impulsó proyectos musicales y educativos que han tocado profundamente a la comunidad.
-                            <br>En 1997 fundó la Fundación Dei Verbum, consolidando iniciativas de formación, apoyo social y evangelización, tales como becas de estudio y programas de ayuda a la Iglesia. 
-                            <br>Su incansable labor le ha valido ser reconocido como Hijo Meritísimo de El Salvador y de Santa Ana. 
-                            <br>A pesar de las adversidades, como la pandemia de 2020, el Padre Martín continuó expandiendo su mensaje de fe a través de las redes sociales, alcanzando a miles de personas.
-                            <br>Con un enfoque único en la música como adoración, su legado sigue vivo, transformando corazones y guiando a muchos en su camino hacia Dios.
+
+                        <p class="mb-5">Nace Martín Enrique en la ciudad de Santa Ana, el 13 de abril de 1963 en la
+                            cabecera del departamento del mismo nombre en la zona occidental de El Salvador,
+                            <br> es el segundo de cinco hijos del matrimonio Ávalos Magaña, una familia de profundas
+                            raíces católicas, que, a pesar de las limitaciones económicas, fomentaron los valores
+                            humanos y espirituales que forjaron en él un afán temprano por conocer, amar y servir a Dios
+                            en su Iglesia.
+                            <br>
+                            Su formación durante el bachillerato con los sacerdotes salesianos, despertó en él un deseo
+                            de formar algún día un grupo musical, sobre todo para poder evangelizar a los jóvenes.
+                            <br>
+                            Hasta ese momento, solo era un sueño, ya que no contaba con los medios, ni las personas que
+                            pudieran desarrollar ese proyecto.
+
                             <hr class="mb-5 tm-hr">
-                            
+
                         </p>
-                        
-                    </div>
-                </section>
-                <section>
-                    <h3 class="tm-title-gray mb-4">Professional Business Services</h3>
-                    <hr class="mb-5 tm-hr">
-                    <div class="tm-services-box mb-60">
-                        <img src="img/services-2.jpg" alt="Image" class="img-fluid tm-services-img">
-                        <div>
-                            <h4 class="tm-text-primary mb-4">Maecenas molestie varius ipsum</h4>
-                            <p class="tm-strategy-text">Donec mauris eros, suscipit fermentum faucibus sagittis, dictum
-                                eget nulla. Duis maximus porttitor ornare. Maecenas blandit vestibulum massa at
-                                accumsan. Duis ultricies mi id justo porttitor, et sollicitudin justo vehicula.</p>
-                        </div>
-                    </div>
-                    <div class="tm-services-box mb-5">
-                        <img src="img/services-3.jpg" alt="Image" class="img-fluid tm-services-img">
-                        <div>
-                            <h4 class="tm-text-primary mb-4">Sed elementum justo in pulvinar</h4>
-                            <p class="tm-strategy-text">Sed non tellus vestibulum, tincidunt risus a, semper erat.
-                                Aliquam porta leo eget faucibus consectetur. Nam mauris felis, consectetur non cursus
-                                sit amet, pellentesque ac leo. Aliquam at dolor du velit scelerisque fringilla.</p>
-                        </div>
+
                     </div>
                 </section>
             </div>
+            <!-- imagen y texto a la derecha -->
             <div class="col-lg-5">
-                <img src="img/con.jpg" alt="Image" class="img-fluid">
+                <img src="img/prin.jpg" alt="Image" class="img-fluid">
                 <div class="tm-bg-gray-dark">
-                    <h4 class="tm-about-person tm-h2"><p>Pbro Martín Enrique Avalos Magaña </p></h4>
-                    <p class="mb-5">Un hombre de sueños, ha dedicado su vida a la evangelización y al servicio de Dios,
-                        <br>marcando huellas a través de la música y la ayuda al prójimo. 
-                        <br>Su legado de fe y esperanza sigue transformando vidas.</p>
-                    
-                    
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">Ha dedicado su vida a la evangelización y al servicio de Dios,
+                        <br>marcando huellas a través de la música y la ayuda al prójimo.
+                        <br>Su legado de fe y esperanza sigue transformando vidas.
+                    </p>
+
+
                 </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 2 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Imagen y texto a la izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-5">
+                <img src="img/con2.jpg" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">Ha entregado su corazón a la misión de servir con amor y fe,
+                        compartiendo luz y esperanza en cada acción y palabra que ofrece.<br>
+                        Su testimonio de amor y dedicación inspira y renueva vidas.
+                    </p>
+                </div>
+            </div>
+            <!-- Texto a la derecha -->
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“Un corazón al servicio de Dios”</h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">En 1982 inicia su etapa como seminarista la cual concluye en 1987.
+                            <br>Como Fecha conmemorativa 8 de diciembre de 1988, Martín Enrique Ávalos Magaña recibe el
+                            sacramento del orden
+                            sacerdotal, posteriormente es nombrado vicario de la Parroquia San José Obrero, a un año de
+                            su ordenación sacerdotal, Monseñor Fernando Sáenz Lacalle, le ofrece la posibilidad de
+                            estudiar la licenciatura en Teología Moral en la Universidad de la Santa Cruz de Roma,
+                            Italia. <br>Oportunidad que fue bien aprovechada culminando sus estudios en el referido
+                            centro
+                            de estudios, en el año 1991.
+                            A su regreso de Roma, fue enviado como vicario de las Parroquias San Pedro Apóstol, Metapán
+                            y El Calvario, en la ciudad de Santa Ana.<br>
+                            <br>En el año de 1993, con 30 años de edad, Monseñor René Revelo lo envía como párroco de la
+                            Parroquia La sagrada Familia de Turín en el departamento occidental de Ahuachapán, era una
+                            experiencia nueva, que le exigía una mayor responsabilidad, iniciativa y espíritu de
+                            observación.<br>
+                            Casi de manera simultánea con su nuevo nombramiento inicia su labor evangelizadora a través
+                            de los medios de comunicación social, con especial énfasis en la radio, siendo sus primeros
+                            programas "La hora de la gracia" en radio luz y "Razón de vivir" en radio 1090 de
+                            Atiquizaya.
+
+                            <hr class="mb-5 tm-hr">
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 3 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Texto a la Izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“Donde hay fe, nace la esperanza.”</h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">En 1994 con un grupo de amigos compraron un par de guitarras y panderetas, dando
+                            paso a visitar los oratorios del Ciprés, Las Pozas, El Tablón que son cantones de San
+                            Lorenzo, municipio de Ahuachapán.<br> Por las noches daban cursos bíblicos y luego animaban
+                            con
+                            los cantos que conocían. <br>La semilla se había sembrado, faltaba tiempo, esfuerzo, pero
+                            sobre
+                            todo perseverancia y sacrificio.<br>
+                            <br>
+                            La Parroquia Inmaculada Concepción de María de Atiquizaya, en el año 1997 lo recibe como
+                            párroco, lugar donde se consolida su legado musical y evangelizador, apoyando a muchos
+                            jóvenes a descubrir sus talentos, y por qué no decirlo, a encaminar sus pasos al camino de
+                            la verdad y la vida.<br>
+                            Y es así como da inicio la obra que hoy en día conocemos como Dei Verbum.<br>
+                            Quien ha llegado a compartir escenario con la Orquesta Platinum El Salvador.
+
+                            <hr class="mb-5 tm-hr">
+
+                        </p>
+
+                    </div>
+                </section>
+            </div>
+            <!-- imagen y texto a la derecha -->
+            <div class="col-lg-5">
+                <img src="img/con3.png" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">Y así comienza el camino de la palabra divina, que sigue iluminando el corazón de
+                        quienes la reciben con fe y devoción, transformando vidas y guiando a la humanidad hacia la
+                        verdad eterna, tal como lo hace la obra que perdura hasta nuestros días.
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 4 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Imagen y texto a la izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-5">
+                <img src="img/con4.png" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">Su influencia crece cada vez más, inspirando a quienes lo rodean a seguir su ejemplo
+                        de entrega desinteresada, impulsando a otros a valorar el poder de la música y la generosidad
+                        como medios de transformación personal y colectiva
+                    </p>
+                </div>
+            </div>
+            <!-- Texto a la derecha -->
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“Un legado que transforma vidas y deja huellas.”</h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">Su legado comienza a dejar huellas notorias, haciendo que otras personas
+                            reconozcan su pasión por la música y su interés por ayudar al prójimo sin esperar nada a
+                            cambio, en reconocimiento a su trayectoria las autoridades edilicias nombran en su honor una
+                            de las principales avenidas de Atiquizaya.<br>
+                            En el año 2002 es nombrado como párroco de la Universidad Católica de El Salvador, conocida
+                            como UNICAES. Durante su servicio en la parroquia Universitaria continuo su legado dejando
+                            huellas no solo estructurales sino marcando vidas a través del evangelio.<br>
+                            <br>
+                            La necesidad de seguir tocando vidas por medio de la alabanza y la adoración, hace que los
+                            días jueves se traslade la hora santa al Hogar Santa Ana Carpinelo, <br>que acogía a cientos
+                            de
+                            feligreses que buscaban un encuentro con Jesús, ya que la parroquia universitaria se quedaba
+                            pequeña para la multitud de personas sedientas del amor de Dios.
+
+                            <hr class="mb-5 tm-hr">
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 5 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Texto a la Izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“Su visión creó proyectos que transformaron vidas y comunidades.”
+                        </h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">En el año 2006 con el objetivo de beneficiar a más personas de manera ordenada,
+                            se constituye FUNDACIÓN DEI VERBUM con la proyección de consolidar diferentes proyectos de
+                            evangelización y promoción humana.<br> Hoy en día se han consolidado los siguientes
+                            proyectos:<br>
+                            Becas de Estudio<br>San Mateo 25, 35<br> Ministerio Dei Verbum<br>Evangelización y
+                            Catequesis
+                            Ayuda a la Iglesia<br>Dei Verbum Producciones <br> Dei Verbum Radio.<br>
+
+                            En el año 2010 el Padre Martín es nombrado vicario general de la Diócesis de Santa Ana,
+                            cargo que ocupa a la fecha.<br>
+                            Monseñor Romeo Tobar Astorga, siendo Obispo de la Diócesis de Santa Ana, en el año 2012
+                            nombra Párroco de la Parroquia Madre del Salvador al Presbítero Martín Enrique Ávalos.<br>
+                            Su legado en dicha parroquia ha sido notorio, iniciando por la reconstrucción del Templo
+                            parroquial, parqueo, salones, casa parroquial, cinturón ecológico y remodelación de los
+                            baños sanitarios.
+
+
+                            <hr class="mb-5 tm-hr">
+
+                        </p>
+
+                    </div>
+                </section>
+            </div>
+            <!-- imagen y texto a la derecha -->
+            <div class="col-lg-5">
+                <img src="img/con5.jpg" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">
+                        Cada acción dedicada con amor y servicio deja una huella profunda en los corazones, inspirando a
+                        otros a seguir el camino del bien. <br>El impacto no se mide solo en logros, sino en el cambio
+                        que
+                        provocamos en los demás, transformando vidas con cada esfuerzo..
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 6 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Imagen y texto a la izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-5">
+                <img src="img/con6.jpg" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">
+                        La grandeza de un corazón dedicado a servir radica en su capacidad de transformar vidas,
+                        llevando esperanza, valores y fe a quienes más lo necesitan. <br>Su esfuerzo diario inspira a
+                        otros
+                        a unirse en la misión de construir un mundo lleno de amor y justicia.
+                    </p>
+                </div>
+            </div>
+            <!-- Texto a la derecha -->
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“Su incansable trabajo y visión transformaron vidas y dejaron un
+                            legado de fe”</h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">El 7 de febrero del 2013 es nombrado hijo meritísimo de El Salvador, en el
+                            Decreto N.º 269 de la Asamblea Legislativa de La Republica de El Salvador, reza de la
+                            siguiente manera.<br>
+                            <br>
+                            “Que este loable sacerdote ha realizado a través de su fundación, una labor altruista,
+                            desarrollando acciones entre las que se pueden mencionar: creación de un comedor gratuito,
+                            becas a niños y niñas, jóvenes universitarios y seminaristas, formación musical y
+                            evangelización, lo que ha generado producción de material audiovisual, que ha promovido la
+                            convivencia social pacífica, y el rescate de los valores morales. <br>Que, en virtud de los
+                            méritos antes señalados, es procedente declarar al Padre Martín Enrique Ávalos Magaña, "Hijo
+                            Meritísimo de El Salvador", en reconocimiento a su destacada labor pastoral…”<br>
+                            <br>
+                            Y a su vez el 12 de julio de 2013 es nombrado hijo meritísimo de Santa Ana…<br>
+                            <br>
+                            El padre Martín es considerado un sacerdote incansable con una sola visión, Expandir el
+                            Reino de Dios a las naciones, es por ello que día a día trabaja arduamente para hacer vida
+                            el evangelio.
+
+                            <hr class="mb-5 tm-hr">
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 7 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Texto a la Izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“En tiempos de crisis, su fe y labor iluminaron el mundo con
+                            esperanza y amor."</h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">Sin embargo, en marzo 2020 la pandemia le dio un giro a la visión del Padre
+                            Martín, sin perder el objetivo de llevar la buena nueva de salvación a las naciones.<br><br>
+                            El 22 de marzo de 2020, se cierran los templos, pero no ceso la sed de anunciar el
+                            evangelio, desde dicha fecha el Padre Martín junto a Dei Verbum Producciones asume el reto
+                            de evangelizar el sexto continente, haciendo uso de la tecnología, usando como areópagos las
+                            redes sociales, llevando un mensaje de fe, esperanza y amor en medio de la crisis mundial
+                            que todos atravesábamos.<br>
+                            Consciente de la necesidad material que existía en ese momento nace el proyecto “Denles
+                            ustedes de comer” compartiendo lo poco o lo mucho que se tenía en alimentos y artículos de
+                            primera necesidad, sin dejar de lado los proyectos que como fundación se realizan.<br><br>
+                            En medio de la pandemia su labor no se detuvo, al contrario, intensifico la evangelización a
+                            través de la música, adoración y predicación, creando retiros virtuales, asambleas, series
+                            kerigmáticas, formaciones catequéticas, conciertos y sin dejar de lado la Santa Eucaristía y
+                            la Adoración Eucarística que se ha transmitido de forma continua hasta la fecha.<br>
+                            No podemos dejar de lado la creación de sus espacios en vivos tales como:
+                            <br> “Cafecito con Pan”
+                            <br>y su segmento de oración:
+                            <br>“Quiero orar contigo”.
+
+
+                            <hr class="mb-5 tm-hr">
+
+                        </p>
+
+                    </div>
+                </section>
+            </div>
+            <!-- imagen y texto a la derecha -->
+            <div class="col-lg-5">
+                <img src="img/prin.jpg" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">En tiempos de adversidad, cuando todo parecía detenerse, la fe se convirtió en una
+                        fuerza imparable. Con creatividad y entrega, se llevaron mensajes de esperanza al mundo,
+                        demostrando que incluso en las pruebas más grandes, el amor y la solidaridad trascienden
+                        cualquier barrera.
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 8 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Imagen y texto a la izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-5">
+                <img src="img/prin.jpg" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">Creer en los milagros es confiar en el poder de Dios incluso en los momentos más
+                        difíciles. <br>Cada prueba superada con fe se convierte en un testimonio vivo de esperanza,
+                        inspirando a otros a encontrar en la oración la fuerza para seguir adelante.
+                    </p>
+                </div>
+            </div>
+            <!-- Texto a la derecha -->
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“Con fe inquebrantable, transformó su lucha en un milagro de
+                            esperanza.”</h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">“El tiempo de los milagros no ha terminado” ha sido una frase que ha
+                            caracterizado al Padre Martín en todo momento creyendo fielmente en la misericordia y
+                            providencia de Dios.<br><br>
+                            El 18 de agosto del 2021 recibe una prueba de COVID-19 con resultado positivo, era momento
+                            de hacer vida la frase que lo caracteriza.<br>
+                            Después de ser hospitalizado con un diagnóstico poco favorable, él clama a Dios pidiendo que
+                            sople vida en sus pulmones y nace su nueva frase: <br> “Hoy es el día del milagro”, que más
+                            que
+                            una frase es la suplica de un hijo de Dios pidiendo misericordia.<br><br>
+                            Hoy en día su legado ha marcado miles de vidas, que no podemos cuantificar, sin embargo, son
+                            incontables los testimonios que día a día dan fe de la labor incansable de nuestro querido
+                            Padre Martín.
+
+                            <hr class="mb-5 tm-hr">
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 9 descripcion -->
+    <div class="container-fluid mt-7">
+        <!-- Texto a la Izquierda -->
+        <div class="row mb-6">
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">“El sueño de niño, ahora un legado de fe que enciende corazones.”
+                        </h3>
+                        <hr class="mb-5 tm-hr">
+
+                        <p class="mb-5">Lo que un día inició como un sueño en el corazón de un niño de la Ciudad de
+                            Santa Ana, El Salvador, <br>ahora se ha convertido en un legado de evangelización no solo a
+                            nivel
+                            nacional sino sobrepasando fronteras, a raíz de un encuentro que él tuvo con un Jesús
+                            vivo,<br>
+                            esto ha permitido hacer que la música sea adoración a los pies de Jesús Sacramentado, estilo
+                            único que ha caracterizado al Padre Martín Ávalos por más de 33 años, germinando una semilla
+                            de adoradores convencidos de la presencia real de Jesús en el sacramento del altar,
+                            descubriendo en muchos jóvenes talentos y forjando en ellos una vocación para servir a Dios
+                            por medio de sus dones; encendiendo velas en medio de la oscuridad.
+                            <br>
+                            <br>
+                            siempre recuerda:<br>
+
+
+                            “El tiempo de los milagros no ha terminado”
+
+                            <hr class="mb-5 tm-hr">
+
+                        </p>
+
+                    </div>
+                </section>
+            </div>
+            <!-- imagen y texto a la derecha -->
+            <div class="col-lg-5">
+                <img src="img/prin.jpg" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark">
+                    <h4 class="tm-about-person tm-h2">
+                        <p>Pbro Martín Enrique Avalos Magaña </p>
+                    </h4>
+                    <p class="mb-5">Y así comienza el camino de la palabra divina, que sigue iluminando el corazón de
+                        quienes la reciben con fe y devoción, transformando vidas y guiando a la humanidad hacia la
+                        verdad eterna, tal como lo hace la obra que perdura hasta nuestros días.
+                    </p>
+
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -149,7 +604,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="tm-overlay tm-bg-black-transparent p-5 ml-auto mr-0">
-                        <p class="mb-0 text-white">This is a parallax image background section. Text section box has 50% alpha on black color. Phasellus interdum lobortis ultrices. Cras nulla nulla, fermentum vel ligula in, mollis imperdiet ipsum.</p>
+                        <p class="mb-0 text-white">El padre Martín sigue dedicando su vida al ministerio, caminando con
+                            fe y esperanza junto a su comunidad. Día tras día, su labor refleja su inquebrantable
+                            creencia en que *"el tiempo de los milagros no ha terminado."* Su presencia inspira, su
+                            ejemplo transforma, y sus palabras siembran luz en los corazones que lo rodean.</p>
                     </div>
                 </div>
             </div>
@@ -161,25 +619,29 @@
             <div class="col-xl-3 col-lg-6 px-xl-4 px-3">
                 <div class="tm-box-3 tm-bg-gray">
                     <div class="text-center"><i class="fas fa-cloud-sun fa-3x mb-8 mt-4"></i></div>
-                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id consectetur auctor.</p>
+                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id
+                        consectetur auctor.</p>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-6 px-xl-4 px-3">
                 <div class="tm-box-3 tm-bg-gray">
                     <div class="text-center"><i class="fas fa-hiking fa-3x mb-8 mt-4"></i></div>
-                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id consectetur auctor.</p>
+                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id
+                        consectetur auctor.</p>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-6 px-xl-4 px-3">
                 <div class="tm-box-3 tm-bg-gray">
                     <div class="text-center"><i class="fas fa-tree fa-3x mb-8 mt-4"></i></div>
-                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id consectetur auctor.</p>
+                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id
+                        consectetur auctor.</p>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-6 px-xl-4 px-3">
                 <div class="tm-box-3 tm-bg-gray">
                     <div class="text-center"><i class="fas fa-campground fa-3x mb-8 mt-4"></i></div>
-                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id consectetur auctor.</p>
+                    <p>Nam nulla purus, lobortis ac euismod non, tincidunt eget velit. Nullam bibendum tortor id
+                        consectetur auctor.</p>
                 </div>
             </div>
         </div>
@@ -188,18 +650,21 @@
     <footer class="container-fluid">
         <div class="row">
             <p class="col-lg-9 col-md-8 mb-5 mb-md-0">
-                Copyright &copy; 2020 <span class="tm-text-primary">Business Oriented</span>
-                - designed by <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-link-primary">TemplateMo</a>
+                Copyright &copy; 2024 <span class="tm-text-primary">Dei Verbum</span>
+                - designed by <a rel="nofollow" target="_parent" href="" class="tm-link-primary">Dei Verbum
+                    Producciones</a>
             </p>
             <div class="col-lg-3 col-md-4 text-right">
-                <a rel="nofollow" target="_blank" href="https://fb.com/templatemo" class="tm-social-link">
+                <a rel="nofollow" target="_blank" href="https://www.facebook.com/PbroMartinAvalos"
+                    class="tm-social-link">
                     <i class="fab fa-facebook fa-2x tm-social-icon"></i>
                 </a>
-                <a href="https://twitter.com" class="tm-social-link">
+                <a href="#" class="tm-social-link">
                     <i class="fab fa-twitter fa-2x tm-social-icon"></i>
                 </a>
-                <a href="https://linkedin.com" class="tm-social-link">
-                    <i class="fab fa-linkedin fa-2x tm-social-icon"></i>
+                <a href="https://patreon.com/padremartinavalos?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                    class="tm-social-link">
+                    <i class="fab fa-patreon fa-2x tm-social-icon"></i>
                 </a>
             </div>
         </div>
@@ -212,8 +677,31 @@
     <script>
         $(document).ready(function () {
             $('#parallax-1').parallax({ imageSrc: 'img/biz-oriented-header.jpg' });
-            $('#parallax-3').parallax({ imageSrc: 'img/biz-oriented-footer-2.jpg' });
+            $('#parallax-2').parallax({ imageSrc: 'img/biz-oriented-footer.jpg' });
         });
     </script>
+
+    <!-- Imagen que seguirá al mouse -->
+    <img id="moverImagen" src="img/movil.png" alt="Imagen que sigue al mouse" class="img-pulses">
+
+    <script>
+        // Función para mover la imagen a la posición del mouse
+        function moverImagenAlMouse(event) {
+            const imagen = document.getElementById('moverImagen');
+
+            // Obtener las coordenadas del mouse
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // Establecer la nueva posición de la imagen, teniendo en cuenta el scroll de la página
+            imagen.style.left = `${mouseX - imagen.width / 2}px`; // Centrado en el cursor
+            imagen.style.top = `${mouseY - imagen.height / 2 + window.scrollY}px`; // Centrado en el cursor + desplazamiento de la página
+        }
+
+        // Escuchar el movimiento del mouse
+        document.addEventListener('mousemove', moverImagenAlMouse);
+    </script>
+
 </body>
+
 </html>
