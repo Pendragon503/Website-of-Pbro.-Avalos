@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Importante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .accept {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .decline {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .modal-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .modal-accept {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .modal-decline {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Información Importante</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre este material</h2>
+            <p>Este material de retiros y formaciones está diseñado para ayudarte a aprender y enseñar, sirviendo como inspiración para tu trabajo en la iglesia y en tu vida diaria.</p>
+            <p><strong>Sin embargo, es fundamental tener en cuenta lo siguiente:</strong></p>
+            <ul>
+                <li>No está permitido vender este contenido.</li>
+                <li>No debes publicar estos videos con la intención de monetizarlos.</li>
+            </ul>
+            <p>Gracias por respetar estas indicaciones y por utilizar este material de manera responsable.</p>
+        </section>
+
+        <section>
+            <h2>Tener en cuenta</h2>
+            <p>Es muy importante asegurarte de que estás obteniendo toda la información directamente a través de mi plataforma oficial.</p>
+            <p><strong>Recomendaciones:</strong></p>
+            <ul>
+                <li>Verifica siempre que se trate de mi cuenta auténtica y autorizada.</li>
+                <li>Evita perfiles no oficiales que podrían causar confusión o incluso fraude.</li>
+            </ul>
+            <p>Te invito a estar atento y a consultar únicamente las publicaciones y contenidos que comparto por mis canales verificados.</p>
+            <p>De esta manera, te garantizo que recibirás información precisa y confiable.</p>
+            <p><strong>¡Gracias por tu apoyo y confianza siempre!</strong></p>
+        </section>
+
+        <section>
+            <h2>Uso de Cookies</h2>
+            <p>Este sitio web utiliza cookies para mejorar tu experiencia de usuario y garantizar el correcto funcionamiento de nuestras funcionalidades. A continuación, te explicamos cómo usamos las cookies:</p>
+            <ul>
+                <li><strong>Cookies esenciales:</strong> Son necesarias para que el sitio web funcione correctamente y no se pueden desactivar en nuestros sistemas. Estas cookies no recopilan información personal identificable.</li>
+                <li><strong>Cookies de rendimiento:</strong> Nos ayudan a entender cómo los usuarios interactúan con nuestro sitio, permitiéndonos mejorar su diseño y contenido. La información recopilada es anónima.</li>
+                <li><strong>Cookies de funcionalidad:</strong> Permiten personalizar tu experiencia en el sitio, recordando tus preferencias y configuraciones.</li>
+                <li><strong>Cookies de terceros:</strong> Algunas funcionalidades, como videos incrustados o redes sociales, pueden usar cookies de terceros para ofrecerte una experiencia más completa.</li>
+            </ul>
+            <p>Al continuar navegando en nuestro sitio, aceptas el uso de cookies según nuestra política. Puedes gestionar tus preferencias de cookies desde la configuración de tu navegador.</p>
+        </section>
+
+        <div class="buttons">
+            <button class="accept" onclick="location.href='index.html'">Aceptar</button>
+            <button class="decline" onclick="location.href='https://www.google.com/'">Rechazar</button>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 - Todos los derechos reservados
+    </footer>
+</body>
+</html>
