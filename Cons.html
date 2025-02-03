@@ -6,27 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pbro Martín Ávalos</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
     <link href="css/templatemo-business-oriented.css" rel="stylesheet" />
+    <style>
+        /* Evita la selección de texto */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Bloquear arrastrar imágenes */
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+    <script>
+        // Función para bloquear teclas específicas
+        function bloquearTeclas(event) {
+            const teclasBloqueadas = [
+                "c", "u", "I", "J", "S", "K", "H"
+            ]; // Letras bloqueadas para combinaciones Ctrl + tecla
+
+            if (event.ctrlKey && teclasBloqueadas.includes(event.key)) {
+                event.preventDefault();
+                alert("Esta acción está bloqueada.");
+            }
+
+            // Bloquear F12
+            if (event.key === "F12") {
+                event.preventDefault();
+                alert("Esta acción está bloqueada.");
+            }
+        }
+
+        // Bloquear clic derecho
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            alert("El clic derecho está deshabilitado.");
+        });
+
+        // Bloquear combinaciones de teclas
+        document.addEventListener("keydown", bloquearTeclas);
+    </script>
+
 </head>
 <style>
     body {
-      background-color: #70919e46;
-      color: white; /* Asegura de que el texto sea visible */
+        background-color: #70919e46;
+        color: white;
+        /* Asegura de que el texto sea visible */
     }
-  </style>
-                                              
+</style>
+
 <body>
-    
+
     <div class="tm-nav-container-outer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg" id="tm-main-nav">
-                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbar-nav" 
-                            aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+                            data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false"
+                            aria-label="Toggle navigation">
                             <span class="dark-blue-text"><i class="fas fa-bars"></i></span>
                         </button>
                         <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
@@ -43,17 +90,17 @@
                                 <li class="nav-item active">
                                     <a class="nav-link tm-nav-link" href="#">Contactar</a>
                                 </li>
-                            </ul>                            
-                        </div>                        
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <div id="parallax-1" class="parallax-window" data-parallax="scroll" data-image-src="img/R.gif">
         <div class="container-fluid">
             <div class="row">
-                
+
             </div>
         </div>
     </div>
@@ -61,7 +108,8 @@
     <footer class="container-fluid">
         <div class="row">
             <p class="col-lg-9 col-md-8 mb-5 mb-md-0">
-                <a rel="nofollow" target="_parent" href="cookies.html" class="tm-link-primary">Copyright</a> &copy; 2025 <span class="tm-text-primary">Dei Verbum</span>
+                <a rel="nofollow" target="_parent" href="cookies.html" class="tm-link-primary">Copyright</a> &copy; 2025
+                <span class="tm-text-primary">Dei Verbum</span>
                 - designed by <a rel="nofollow" target="_parent" href="" class="tm-link-primary">Dei Verbum
                     Producciones</a>
             </p>

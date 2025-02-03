@@ -11,7 +11,55 @@
     <!-- https://fonts.google.com/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
     <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
-    <link href="css/templatemo-business-oriented.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        /* Evita la selección de texto */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Bloquear arrastrar imágenes */
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+    <script>
+        // Función para bloquear teclas específicas
+        function bloquearTeclas(event) {
+            const teclasBloqueadas = [
+                "c", "u", "I", "J", "S", "K", "H"
+            ]; // Letras bloqueadas para combinaciones Ctrl + tecla
+
+            if (event.ctrlKey && teclasBloqueadas.includes(event.key)) {
+                event.preventDefault();
+                alert("Esta acción está bloqueada.");
+            }
+
+            // Bloquear F12
+            if (event.key === "F12") {
+                event.preventDefault();
+                alert("Esta acción está bloqueada.");
+            }
+        }
+
+        // Bloquear clic derecho
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            alert("El clic derecho está deshabilitado.");
+        });
+
+        // Bloquear combinaciones de teclas
+        document.addEventListener("keydown", bloquearTeclas);
+    </script>
+
 </head>
 <style>
     /* Definimos la animación de pulso */
@@ -308,7 +356,6 @@
             </div>
         </div>
     </div>
-
     <div class="container-fluid mt-7">
         <div class="row">
             <div class="col-lg-5 col-md-6 mb-4">
@@ -342,6 +389,25 @@
                     confiable.<br>
                     ¡Gracias por tu apoyo y confianza siempre!.
                 </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-7">
+        <div class="col-lg-4 col-md-6">
+            <img src="img/Programas/Horarios/CAFECITO.jpg" alt="Image" class="img-fluid">
+            <div class="tm-box tm-box-s">
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <img src="img/Programas/Horarios/PADRES.jpg" alt="Image" class="img-fluid">
+            <div class="tm-box tm-box-s">
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <img src="img/Programas/Horarios/QUIERO.jpg" alt="Image" class="img-fluid">
+            <div class="tm-box tm-box-s">
+                
             </div>
         </div>
     </div>

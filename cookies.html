@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,8 +128,51 @@
             color: white;
         }
     </style>
-    
+    <style>
+        /* Evita la selección de texto */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* Bloquear arrastrar imágenes */
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+    <script>
+        // Función para bloquear teclas específicas
+        function bloquearTeclas(event) {
+            const teclasBloqueadas = [
+                "c", "u", "I", "J", "S", "K", "H"
+            ]; // Letras bloqueadas para combinaciones Ctrl + tecla
+
+            if (event.ctrlKey && teclasBloqueadas.includes(event.key)) {
+                event.preventDefault();
+                alert("Esta acción está bloqueada.");
+            }
+
+            // Bloquear F12
+            if (event.key === "F12") {
+                event.preventDefault();
+                alert("Esta acción está bloqueada.");
+            }
+        }
+
+        // Bloquear clic derecho
+        document.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
+            alert("El clic derecho está deshabilitado.");
+        });
+
+        // Bloquear combinaciones de teclas
+        document.addEventListener("keydown", bloquearTeclas);
+    </script>
 </head>
+
 <body>
     <header>
         <h1>Información Importante</h1>
@@ -137,7 +181,8 @@
     <main>
         <section>
             <h2>Sobre este material</h2>
-            <p>Este material de retiros y formaciones está diseñado para ayudarte a aprender y enseñar, sirviendo como inspiración para tu trabajo en la iglesia y en tu vida diaria.</p>
+            <p>Este material de retiros y formaciones está diseñado para ayudarte a aprender y enseñar, sirviendo como
+                inspiración para tu trabajo en la iglesia y en tu vida diaria.</p>
             <p><strong>Sin embargo, es fundamental tener en cuenta lo siguiente:</strong></p>
             <ul>
                 <li>No está permitido vender este contenido.</li>
@@ -148,27 +193,37 @@
 
         <section>
             <h2>Tener en cuenta</h2>
-            <p>Es muy importante asegurarte de que estás obteniendo toda la información directamente a través de mi plataforma oficial.</p>
+            <p>Es muy importante asegurarte de que estás obteniendo toda la información directamente a través de mi
+                plataforma oficial.</p>
             <p><strong>Recomendaciones:</strong></p>
             <ul>
                 <li>Verifica siempre que se trate de mi cuenta auténtica y autorizada.</li>
                 <li>Evita perfiles no oficiales que podrían causar confusión o incluso fraude.</li>
             </ul>
-            <p>Te invito a estar atento y a consultar únicamente las publicaciones y contenidos que comparto por mis canales verificados.</p>
+            <p>Te invito a estar atento y a consultar únicamente las publicaciones y contenidos que comparto por mis
+                canales verificados.</p>
             <p>De esta manera, te garantizo que recibirás información precisa y confiable.</p>
             <p><strong>¡Gracias por tu apoyo y confianza siempre!</strong></p>
         </section>
 
         <section>
             <h2>Uso de Cookies</h2>
-            <p>Este sitio web utiliza cookies para mejorar tu experiencia de usuario y garantizar el correcto funcionamiento de nuestras funcionalidades. A continuación, te explicamos cómo usamos las cookies:</p>
+            <p>Este sitio web utiliza cookies para mejorar tu experiencia de usuario y garantizar el correcto
+                funcionamiento de nuestras funcionalidades. A continuación, te explicamos cómo usamos las cookies:</p>
             <ul>
-                <li><strong>Cookies esenciales:</strong> Son necesarias para que el sitio web funcione correctamente y no se pueden desactivar en nuestros sistemas. Estas cookies no recopilan información personal identificable.</li>
-                <li><strong>Cookies de rendimiento:</strong> Nos ayudan a entender cómo los usuarios interactúan con nuestro sitio, permitiéndonos mejorar su diseño y contenido. La información recopilada es anónima.</li>
-                <li><strong>Cookies de funcionalidad:</strong> Permiten personalizar tu experiencia en el sitio, recordando tus preferencias y configuraciones.</li>
-                <li><strong>Cookies de terceros:</strong> Algunas funcionalidades, como videos incrustados o redes sociales, pueden usar cookies de terceros para ofrecerte una experiencia más completa.</li>
+                <li><strong>Cookies esenciales:</strong> Son necesarias para que el sitio web funcione correctamente y
+                    no se pueden desactivar en nuestros sistemas. Estas cookies no recopilan información personal
+                    identificable.</li>
+                <li><strong>Cookies de rendimiento:</strong> Nos ayudan a entender cómo los usuarios interactúan con
+                    nuestro sitio, permitiéndonos mejorar su diseño y contenido. La información recopilada es anónima.
+                </li>
+                <li><strong>Cookies de funcionalidad:</strong> Permiten personalizar tu experiencia en el sitio,
+                    recordando tus preferencias y configuraciones.</li>
+                <li><strong>Cookies de terceros:</strong> Algunas funcionalidades, como videos incrustados o redes
+                    sociales, pueden usar cookies de terceros para ofrecerte una experiencia más completa.</li>
             </ul>
-            <p>Al continuar navegando en nuestro sitio, aceptas el uso de cookies según nuestra política. Puedes gestionar tus preferencias de cookies desde la configuración de tu navegador.</p>
+            <p>Al continuar navegando en nuestro sitio, aceptas el uso de cookies según nuestra política. Puedes
+                gestionar tus preferencias de cookies desde la configuración de tu navegador.</p>
         </section>
 
         <div class="buttons">
@@ -181,4 +236,5 @@
         &copy; 2025 - Todos los derechos reservados
     </footer>
 </body>
+
 </html>
